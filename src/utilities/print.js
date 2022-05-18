@@ -1,16 +1,16 @@
 import chalk from 'chalk';
-import moment from 'moment';
+import dayjs from 'dayjs';
 
 const APP_IDENTIFIER = chalk.underline('[rcli]');
 
 export const print = (...messages) => {
-  const timestamp = chalk.gray(moment().format('h:mm:ss'));
+  const timestamp = chalk.gray(dayjs().format('h:mm:ss'));
 
   console.log(timestamp, APP_IDENTIFIER, ...messages);
 };
 
 export const printError = (error) => {
-  const timestamp = chalk.gray(moment().format('h:mm:ss'));
+  const timestamp = chalk.gray(dayjs().format('h:mm:ss'));
 
   console.log(
     timestamp,
@@ -22,7 +22,7 @@ export const printError = (error) => {
 };
 
 export const printWarning = (warning) => {
-  const timestamp = chalk.gray(moment().format('h:mm:ss'));
+  const timestamp = chalk.gray(dayjs().format('h:mm:ss'));
 
   console.log(
     timestamp,
