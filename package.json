@@ -1,6 +1,6 @@
 {
   "name": "xhy-rcli",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "description": "Command-line utility for working with React applications",
   "bin": "bin/index.js",
   "scripts": {
