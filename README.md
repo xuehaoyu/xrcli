@@ -1,15 +1,15 @@
-# React 命令行 `xhy-rcli`
+# React 命令行 `rcli-xhy`
 
-`xhy-rcli` 快速生成react组件的包
+`rcli-xhy` 快速生成react组件的包
 
 ```sh
-npm install -g xhy-rcli
+npm install -g rcli-xhy
 ```
 
 ## 预览
 
 ```
-Usage: xhy-rcli [options] [command]
+Usage: rcli-xhy [options] [command]
 
 Commands:
 
@@ -34,47 +34,47 @@ Options:
 
 ## 生成
 
-`xhy-rcli` 支持通过运行以下命令轻松生成组件：
+`rcli-xhy` 支持通过运行以下命令轻松生成组件：
 
 ```sh
-$ xhy-rcli generate component -c ComponentName
+$ rcli-xhy generate component -c ComponentName
 ```
 
 默认情况下，生成的组件放在 `src/cmoponents` 下。 如果你想改变它，只需使用 `-d, --directory` 标志：
 
 ```sh
-$ xhy-rcli generate component -c ComponentName -d some/other/directory
+$ rcli-xhy generate component -c ComponentName -d some/other/directory
 ```
 
 用 `-s, --stateless` 标志指定生成组件的css：
 
 ```sh
-$ xhy-rcli generate component -c ComponentName -s
+$ rcli-xhy generate component -c ComponentName -s
 ```
 
 默认情况下创建指定组件名的文件, 使用 `-f, --folder` 标志构建一个index模式的文件夹
 
 ```sh
-$ xhy-rcli generate component -c ComponentName -f
+$ rcli-xhy generate component -c ComponentName -f
 ```
 
 默认情况下创建类组件，使用 `-t, --type`  `class or fn`标志创建不同类型的组件:
 
 ```sh
-$ xhy-rcli generate component -t ComponentName -t class|fn
+$ rcli-xhy generate component -t ComponentName -t class|fn
 ```
 
 默认情况下创建js组件, 使用 `--typescript` 标志构建一个typescript组件:
 
 ```sh
-$ xhy-rcli generate component -c ComponentName --typescript
+$ rcli-xhy generate component -c ComponentName --typescript
 ```
 ## 脚手架新应用
 
 您可以通过运行快速搭建新应用程序:
 
 ```sh
-$ xhy-rcli new appName
+$ rcli-xhy new appName
 ```
 
 这将创建一个名为 `appName` 的文件夹，其中包含一个基础项目，该项目将允许您运行一个开发服务器，其中包括热模块替换等有用功能
@@ -94,12 +94,12 @@ $ npm run start:prod
 
 ### 脚手架选项
 
-您可以在生成新应用程序时传递各种选项。 截至目前，`xhy-rcli` 支持两个标志，`--test` 和 `--linter`，并实现了 `jest` 测试框架和 `eslint`
+您可以在生成新应用程序时传递各种选项。 截至目前，`rcli-xhy` 支持两个标志，`--test` 和 `--linter`，并实现了 `jest` 测试框架和 `eslint`
 
 要在构建应用程序时包含它们，只需执行以下操作:
 
 ```sh
-$ xhy-rcli new appName -t jest -l eslint
+$ rcli-xhy new appName -t jest -l eslint
 ```
 
 该项目现在将分别为测试和 linting 提供 `jest` 和 `eslint` 支持。

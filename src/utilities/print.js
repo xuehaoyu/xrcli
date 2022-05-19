@@ -1,7 +1,7 @@
 import chalk from 'chalk'
 import dayjs from 'dayjs'
 
-const APP_IDENTIFIER = chalk.underline('[xhy-rcli]')
+const APP_IDENTIFIER = chalk.underline('[rcli-xhy]')
 
 export const print = (...messages) => {
   const timestamp = chalk.gray(dayjs().format('h:mm:ss'))
