@@ -1,6 +1,6 @@
 # React 命令行 `rcli-xhy`
 
-`rcli-xhy` 快速生成react组件的包
+`rcli-xhy` 快速生成 react 组件的包
 
 ```sh
 npm install -g rcli-xhy
@@ -46,29 +46,30 @@ $ rcli-xhy generate component -c ComponentName
 $ rcli-xhy generate component -c ComponentName -d some/other/directory
 ```
 
-用 `-s, --stateless` 标志指定生成组件的css：
+用 `-s, --stateless` `css or less or scss`标志指定生成组件的样式文件,默认为 css：
 
 ```sh
-$ rcli-xhy generate component -c ComponentName -s
+$ rcli-xhy generate component -c ComponentName -s css|less|scss
 ```
 
-默认情况下创建指定组件名的文件, 使用 `-f, --folder` 标志构建一个index模式的文件夹
+默认情况下创建指定组件名的文件, 使用 `-f, --folder` 标志构建一个 index 模式的文件夹
 
 ```sh
 $ rcli-xhy generate component -c ComponentName -f
 ```
 
-默认情况下创建类组件，使用 `-t, --type`  `class or fn`标志创建不同类型的组件:
+默认情况下创建类组件，使用 `-t, --type` `class or fn`标志创建不同类型的组件:
 
 ```sh
 $ rcli-xhy generate component -t ComponentName -t class|fn
 ```
 
-默认情况下创建js组件, 使用 `--typescript` 标志构建一个typescript组件:
+默认情况下创建 js 组件, 使用 `--typescript` 标志构建一个 typescript 组件:
 
 ```sh
 $ rcli-xhy generate component -c ComponentName --typescript
 ```
+
 ## 脚手架新应用
 
 您可以通过运行快速搭建新应用程序:
