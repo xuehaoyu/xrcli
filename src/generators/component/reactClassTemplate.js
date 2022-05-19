@@ -3,7 +3,9 @@ export const reactClassTemplate = (options) => {
   const imports = ["import React from 'react';"]
 
   if (stateless) {
-    imports.push(`import './${folder ? 'index' : component}.css';`)
+    imports.push(
+      `import './${folder ? 'index' : component}.${stateless || 'css'}';`
+    )
   }
 
   const ins = []

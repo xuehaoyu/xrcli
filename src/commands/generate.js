@@ -11,9 +11,10 @@ import { requiredOptions } from '../utilities/requiredOptions'
 const checkRequiredOptions = requiredOptions({
   component: true,
   directory: false,
-  folder: true,
-  stateless: true,
-  includeTest: true
+  folder: false,
+  stateless: false,
+  type: false,
+  typescript: false
 })
 
 export const generate = command({
@@ -34,7 +35,7 @@ export const generate = command({
     },
     {
       value: '-s, --stateless [stateless]',
-      description: 'Specify whether this is a stateless component or not.'
+      description: 'css文件类型'
     },
     {
       value: '-t, --type [type]',
@@ -44,10 +45,6 @@ export const generate = command({
     {
       value: '--typescript',
       description: '是否创建ts模版'
-    },
-    {
-      value: '--include-test',
-      description: 'Include a test when creating a component'
     }
   ],
   handler: async (item, program) => {
@@ -56,8 +53,7 @@ export const generate = command({
       directory,
       type,
       folder = false,
-      stateless = false,
-      includeTest = false,
+      stateless,
       typescript = false
     } = program.parent
 
@@ -67,7 +63,6 @@ export const generate = command({
       type,
       folder,
       stateless,
-      includeTest,
       typescript
     }
 

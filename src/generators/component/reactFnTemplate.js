@@ -2,7 +2,9 @@ export const reactFnTemplate = (options) => {
   const { folder, component, stateless, typescript } = options
   const imports = ["import React from 'react';"]
   if (stateless) {
-    imports.push(`import './${folder ? 'index' : component}.css';`)
+    imports.push(
+      `import './${folder ? 'index' : component}.${stateless || 'css'}';`
+    )
   }
   const ins = []
   if (typescript) {

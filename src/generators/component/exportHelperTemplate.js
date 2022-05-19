@@ -1,4 +1,0 @@
-export const exportHelperTemplate = (componentName) =>
-`import ${componentName} from './${componentName}';
-export default ${componentName};
-`
