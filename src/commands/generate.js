@@ -35,7 +35,8 @@ export const generate = command({
     },
     {
       value: '-s, --stateless [stateless]',
-      description: 'css文件类型'
+      description: 'css文件类型',
+      defaultValue: 'css'
     },
     {
       value: '-t, --type [type]',
