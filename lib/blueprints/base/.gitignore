@@ -1,5 +1,6 @@
 # Ignore generated directories
 node_modules
+lib
 static
 
 # Ignore dotfiles
