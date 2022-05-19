@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
-'use strict';
+'use strict'
 
-var NODE_ENV = process.env.NODE_ENV;
+const NODE_ENV = process.env.NODE_ENV
 
 if (NODE_ENV === 'development') {
-  require('../src');
+  require('../src')
 } else {
-  require('../lib/cli');
+  require('../lib/cli')
 }
