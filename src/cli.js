@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import program from 'commander'
 import { commands } from './commands'
 
-const VERSION = '0.0.6'
+const VERSION = '0.0.7'
 
 program
   .version(VERSION)

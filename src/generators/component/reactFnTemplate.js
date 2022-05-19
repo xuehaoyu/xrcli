@@ -8,12 +8,13 @@ export const reactFnTemplate = (options) => {
   if (typescript) {
     ins.push(...['', 'interface IProps {}'])
   }
-  const tempDom = `<div class="${component}-block">
-  <div class="${component}-block__header">
-    <h2 class="${component}-block__title"></h2>
+  const tempDomTitle = component.toLowerCase()
+  const tempDom = `<div className="${tempDomTitle}-block">
+  <div className="${tempDomTitle}-block__header">
+    <h2 className="${tempDomTitle}-block__title"></h2>
   </div>
-  <div class="${component}-block__content">
-    <img class="${component}-block__img" src="" />
+  <div className="${tempDomTitle}-block__content">
+    <img className="${tempDomTitle}-block__img" src="" />
   </div>
   </div>`
   let componentTemplate
