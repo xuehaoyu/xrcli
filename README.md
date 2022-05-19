@@ -32,41 +32,6 @@ Options:
   -l, --linter [linter]            选择要包含在构建中的 linter
 ```
 
-## 脚手架新应用
-
-您可以通过运行快速搭建新应用程序:
-
-```sh
-$ xhy-rcli new appName
-```
-
-这将创建一个名为 `applicationName` 的文件夹，其中包含一个基础项目，该项目将允许您运行一个开发服务器，其中包括热模块替换等有用功能
-
-您可以通过在应用程序根文件夹中运行以下命令来使用这两个功能：
-
-```sh
-# 启动
-$ npm run start:dev
-
-# 构建
-$ npm run build
-
-# 启动:生产
-$ npm run start:prod
-```
-
-### 脚手架选项
-
-您可以在生成新应用程序时传递各种选项。 截至目前，`xhy-rcli` 支持两个标志，`--test` 和 `--linter`，并实现了 `jest` 测试框架和 `eslint`
-
-要在构建应用程序时包含它们，只需执行以下操作:
-
-```sh
-$ xhy-rcli new appName -t jest -l eslint
-```
-
-该项目现在将分别为测试和 linting 提供 `jest` 和 `eslint` 支持。
-
 ## 生成
 
 `xhy-rcli` 支持通过运行以下命令轻松生成组件：
@@ -104,3 +69,37 @@ $ xhy-rcli generate component -t ComponentName -t class|fn
 ```sh
 $ xhy-rcli generate component -c ComponentName --typescript
 ```
+## 脚手架新应用
+
+您可以通过运行快速搭建新应用程序:
+
+```sh
+$ xhy-rcli new appName
+```
+
+这将创建一个名为 `appName` 的文件夹，其中包含一个基础项目，该项目将允许您运行一个开发服务器，其中包括热模块替换等有用功能
+
+您可以通过在应用程序根文件夹中运行以下命令来使用这两个功能：
+
+```sh
+# 启动
+$ npm run start:dev
+
+# 构建
+$ npm run build
+
+# 启动:生产
+$ npm run start:prod
+```
+
+### 脚手架选项
+
+您可以在生成新应用程序时传递各种选项。 截至目前，`xhy-rcli` 支持两个标志，`--test` 和 `--linter`，并实现了 `jest` 测试框架和 `eslint`
+
+要在构建应用程序时包含它们，只需执行以下操作:
+
+```sh
+$ xhy-rcli new appName -t jest -l eslint
+```
+
+该项目现在将分别为测试和 linting 提供 `jest` 和 `eslint` 支持。
