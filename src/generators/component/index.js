@@ -43,7 +43,7 @@ const createComponentFolder = (options) =>
         outputFileSync(componentPath, reactFnTemplate(component, true))
       } else {
         print('Creating React Component Class file')
-        outputFileSync(componentPath, reactClassTemplate(component, true))
+        outputFileSync(componentPath, reactClassTemplate(component, false))
       }
 
       if (includeTest) {
@@ -51,8 +51,10 @@ const createComponentFolder = (options) =>
         outputFileSync(componentTestPath, jestTestTemplate(component))
       }
 
-      print('Creating placeholder CSS file')
-      outputFileSync(stylePath, '')
+      if (stateless) {
+        print('创建默认css文件')
+        outputFileSync(stylePath, '')
+      }
 
       resolve()
     })
@@ -69,6 +71,7 @@ const createComponentFile = (options) =>
       distPath,
       `${component}.${typescript ? 'tsx' : 'jsx'}`
     )
+    const stylePath = path.resolve(distPath, `${component}.css`)
     const componentTestPath = path.resolve(
       distPath,
       `__tests__/${component}-test.js`
@@ -85,7 +88,7 @@ const createComponentFile = (options) =>
 
       if (stateless) {
         print('Creating React Stateless Component file')
-        outputFileSync(componentFilePath, reactFnTemplate(component, false))
+        outputFileSync(componentFilePath, reactFnTemplate(component, true))
       } else {
         print('Creating React Component Class file')
         outputFileSync(componentFilePath, reactClassTemplate(component, false))
@@ -94,6 +97,11 @@ const createComponentFile = (options) =>
       if (includeTest) {
         print('Creating test file')
         outputFileSync(componentTestPath, jestTestTemplate(component))
+      }
+
+      if (stateless) {
+        print('创建默认css文件')
+        outputFileSync(stylePath, '')
       }
 
       resolve()

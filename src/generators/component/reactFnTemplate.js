@@ -1,4 +1,4 @@
-export const reactStatelessTemplate = (componentName, includeStyles) => {
+export const reactFnTemplate = (componentName, includeStyles, isTs) => {
   const imports = ["import React from 'react';"]
 
   if (includeStyles) {
