@@ -20,18 +20,18 @@ export const reactFnTemplate = (options) => {
     componentTemplate = `
     interface IProps {}
 
-    const ${component}: React.FC<IProps> = (props: IProps) => (
+    const ${component}: React.FC<IProps> = (props: IProps) => {
       return (
         ${tempDom}
       )
-    );
+    };
     `
   } else {
-    componentTemplate = `const ${component} = () => (
+    componentTemplate = `const ${component} = () => {
       return (
         ${tempDom}
       )
-    );`
+    };`
   }
   const template = [
     ...imports,

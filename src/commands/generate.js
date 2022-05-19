@@ -42,7 +42,7 @@ export const generate = command({
       defaultValue: 'class'
     },
     {
-      value: '-ts, --typescript [typescript]',
+      value: '--typescript',
       description: '是否创建ts模版'
     },
     {
