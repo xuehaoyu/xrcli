@@ -26,9 +26,9 @@
   "author": "Josh Black <joshblack@us.ibm.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joshblack/rcli/issues"
+    "url": "https://github.com/xuehaoyu/xrcli/issues"
   },
-  "homepage": "https://github.com/joshblack/rcli",
+  "homepage": "https://github.com/xuehaoyu/xrcli",
   "dependencies": {
     "babel-polyfill": "^6.8.0",
     "chalk": "^1.1.1",
