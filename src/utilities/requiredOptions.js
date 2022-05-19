@@ -1,20 +1,20 @@
-import invariant from 'fbjs/lib/invariant';
+import invariant from 'fbjs/lib/invariant'
 
 export const requiredOptions = (options) => (givenOptions) => {
-  const missingOptions = [];
+  const missingOptions = []
 
   Object.keys(givenOptions).forEach((option) => {
-    const isRequired = options[option];
+    const isRequired = options[option]
 
     if (isRequired && typeof givenOptions[option] === 'undefined') {
-      missingOptions.push(option);
+      missingOptions.push(option)
     }
-  });
+  })
 
   invariant(
     missingOptions.length === 0,
     'Missing options for the `generate` command, expected the following to ' +
     'be set: [%s].',
-    missingOptions,
-  );
-};
+    missingOptions
+  )
+}

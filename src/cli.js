@@ -1,14 +1,14 @@
-import 'babel-polyfill';
-import program from 'commander';
-import { commands } from './commands';
+import 'babel-polyfill'
+import program from 'commander'
+import { commands } from './commands'
 
-const VERSION = '0.0.1';
+const VERSION = '0.0.1'
 
 program
-  .version(VERSION);
+  .version(VERSION)
 
 commands.forEach((command) => {
-  command.register(program);
-});
+  command.register(program)
+})
 
-program.parse(process.argv);
+program.parse(process.argv)

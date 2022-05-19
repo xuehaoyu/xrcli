@@ -1,5 +1,4 @@
-'use strict';
+'use strict'
 
-require('babel-register');
-require('./cli');
-
+require('babel-register')
+require('./cli')

@@ -1,6 +1,6 @@
-import { componentGenerator } from './component';
+import { componentGenerator } from './component'
 
 export const generators = {
-  component: componentGenerator,
-};
-
+  // 生成组件
+  component: componentGenerator
+}

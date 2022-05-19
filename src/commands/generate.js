@@ -1,9 +1,8 @@
-import path from 'path';
-import invariant from 'fbjs/lib/invariant';
-import { command } from './command';
-import { generators } from '../generators';
-import { print, printError } from '../utilities/print';
-import { requiredOptions } from '../utilities/requiredOptions';
+import invariant from 'fbjs/lib/invariant'
+import { command } from './command'
+import { generators } from '../generators'
+import { printError } from '../utilities/print'
+import { requiredOptions } from '../utilities/requiredOptions'
 
 // Component, Component Folder, test, class syntax, component syntax
 // Route
@@ -14,33 +13,37 @@ const checkRequiredOptions = requiredOptions({
   directory: false,
   folder: true,
   stateless: true,
-  includeTest: true,
-});
+  includeTest: true
+})
 
 export const generate = command({
   name: 'generate <item>',
   options: [
     {
       value: '-d, --directory [directory]',
-      description: 'The output directory where the item will be placed into.',
-      defaultValue: 'src/components',
+      description: '将放置组件的输出目录。',
+      defaultValue: 'src/components'
     },
     {
       value: '-c, --component [componentName]',
-      description: 'The name of the component.',
+      description: '组件名'
     },
     {
       value: '-f, --folder [folder]',
-      description: 'Should this component have it\'s own folder.',
+      description: '组件是否有它自己的文件夹'
     },
     {
       value: '-s, --stateless [stateless]',
-      description: 'Specify whether this is a stateless component or not.',
+      description: 'Specify whether this is a stateless component or not.'
+    },
+    {
+      value: '-ts, --typescript [typescript]',
+      description: '是否创建ts模版'
     },
     {
       value: '--include-test',
-      description: 'Include a test when creating a component',
-    },
+      description: 'Include a test when creating a component'
+    }
   ],
   handler: async (item, program) => {
     const {
@@ -49,7 +52,8 @@ export const generate = command({
       folder = false,
       stateless = false,
       includeTest = false,
-    } = program.parent;
+      typescript = false
+    } = program.parent
 
     const options = {
       component,
@@ -57,20 +61,21 @@ export const generate = command({
       folder,
       stateless,
       includeTest,
-    };
+      typescript
+    }
 
     try {
       invariant(
         item === 'component',
-        'Whoops! `generate` expects `component` right now.',
-      );
+        'Whoops! `generate` expects `component` right now.'
+      )
 
-      checkRequiredOptions(options);
+      checkRequiredOptions(options)
 
-      const generator = generators[item];
-      await generator(options);
+      const generator = generators[item]
+      await generator(options)
     } catch (error) {
-      printError(error);
+      printError(error)
     }
-  },
-});
+  }
+})
