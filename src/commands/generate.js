@@ -37,6 +37,11 @@ export const generate = command({
       description: 'Specify whether this is a stateless component or not.'
     },
     {
+      value: '-t, --type [type]',
+      description: '组件类型,类组件或者函数组件',
+      defaultValue: 'class'
+    },
+    {
       value: '-ts, --typescript [typescript]',
       description: '是否创建ts模版'
     },
@@ -49,6 +54,7 @@ export const generate = command({
     const {
       component,
       directory,
+      type,
       folder = false,
       stateless = false,
       includeTest = false,
@@ -58,6 +64,7 @@ export const generate = command({
     const options = {
       component,
       directory,
+      type,
       folder,
       stateless,
       includeTest,

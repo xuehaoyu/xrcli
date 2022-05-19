@@ -24,6 +24,8 @@ Options:
   -c, --component [componentName]  组件的名称
   -f, --folder [folder]            这个组件是否应该有它自己的文件夹
   -s, --stateless [stateless]      指定这是否是无状态组件
+  -t, --type [type]                指定组件类型 class | fn (默认class)
+  -ts, --typescript [typescript]   指定这是否是ts组件
   --include-test                   创建组件时包含测试
   -t, --test [testFramework]       选择要包含在构建中的测试框架
   -l, --linter [linter]            选择要包含在构建中的 linter
