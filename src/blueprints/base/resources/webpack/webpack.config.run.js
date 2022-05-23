@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 /**
  * This webpack configuration file is used as configuration for the
@@ -8,7 +8,7 @@
 module.exports = {
   output: {
     // The library target must be set as commonjs2
-    libraryTarget: 'commonjs2',
+    libraryTarget: 'commonjs2'
   },
   module: {
     loaders: [
@@ -26,5 +26,4 @@ module.exports = {
     require('autoprefixer'),
     require('postcss-modules-values')
   ]
-};
-
+}

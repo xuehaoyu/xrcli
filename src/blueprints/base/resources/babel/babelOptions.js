@@ -1,20 +1,20 @@
-'use strict';
+'use strict'
 
-var assign = require('object-assign');
+const assign = require('object-assign')
 
-var babelBaseOptions = {
-  presets: ['react', 'es2015', 'stage-1'],
-};
+const babelBaseOptions = {
+  presets: ['react', 'es2015', 'stage-1']
+}
 
-var babelClientOptions = assign({}, babelBaseOptions, {
+const babelClientOptions = assign({}, babelBaseOptions, {
   env: {
     development: {
       presets: ['react-hmre']
     }
   }
-});
+})
 
-var babelServerOptions = assign({}, babelBaseOptions, {
+const babelServerOptions = assign({}, babelBaseOptions, {
   env: {
     development: {
       plugins: [
@@ -28,9 +28,9 @@ var babelServerOptions = assign({}, babelBaseOptions, {
       ]
     }
   }
-});
+})
 
-var babelTestOptions = assign({}, babelBaseOptions, {
+const babelTestOptions = assign({}, babelBaseOptions, {
   env: {
     test: {
       plugins: [
@@ -44,10 +44,9 @@ var babelTestOptions = assign({}, babelBaseOptions, {
       ]
     }
   }
-});
+})
 
-exports.babelBaseOptions = babelBaseOptions;
-exports.babelClientOptions = babelClientOptions;
-exports.babelServerOptions = babelServerOptions;
-exports.babelTestOptions = babelTestOptions;
-
+exports.babelBaseOptions = babelBaseOptions
+exports.babelClientOptions = babelClientOptions
+exports.babelServerOptions = babelServerOptions
+exports.babelTestOptions = babelTestOptions
